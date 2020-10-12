@@ -1,20 +1,36 @@
 <html>
 <head>
-<title>TAREA 1</title>
+<title>validacion de usuario y contraseña</title>
+<script>
+	function comprobarClave(){
+		clave1=document.f1.clave1.value
+		clave2=document.f1.clave2.value
+
+
+		if (clave1 == "emmerson" && clave2 == "ruanno"){
+			alert("los datos coinciden...\n Bienvenido");
+			var href="examenn.html";
+			window.location=href;
+		}
+		else{
+			alert("las dos claves son distintas...\n intentalo de nuevo.");
+			var href="index.html";
+			window.location=href;
+		};
+	}
+</script>
 </head>
-<body bgcolor="gray"> </body>
 <body>
-	<h1><center>Lecture Material</center></h1>
-	<h2>CUATRO TAREAS</h2>
-	<p>aqui estan las tareas de los primeros 4 videos de la Semana 1 en la Sección de Lecture Material
-		<nav>
-			<a href="numero1.html">Tarea 1</a>
-			<br><br>
-			<a href="numero2.html">Tarea 2</a>
-			<br><br>
-			<a href="numero3.html">Tarea 3</a>
-			<br><br>
-			<a href="numero4.html">Tarea 4</a>
-		</nav>
+	<h1><center>Validacion de  usuario</center></h1>
+	<h3><center>usuario: emmerson password: ruanno</center></h3>
+	<br>Bienvenido, espero tengas un buen dia.
+	<br>
+	<form action="" name="f1">
+		Usuario: <input type="password" name="clave1" size="10">
+		<br>
+		password: <input type="password" name="clave2" size="10">
+		<br>
+		<input type="button" value="comprobar si son iguales" onClick="comprobarClave()">
+		</form>
 </body>
 </html>
